@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksForGeeks Survey Form</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div id="main">
+        <h1>GeeksForGeeks Survey Form</h1>
+        <div id="forms">
+                <div class="shift">
+                    <form>
+                        <label for="names">Name</label><br>
+                        <input class="width" type="text" placeholder="Enter your name" id="names">
+                    </form>
+                </div>
+                <div class="shift">
+                    <form>
+                        <label for="emails">Email</label><br>
+                        <input class="width" type="email" placeholder="Enter your email" id="emails">
+                    </form>
+                </div>
+                <div class="shift">
+                    <form>
+                        <label for="ages">Age</label><br>
+                        <input class="width" type="number" min="21" placeholder="Enter your age" id="ages">
+                    </form>
+                </div>
+                <div class="shift">
+                    <form>
+                        <label>Which option best describes for you?</label><br>
+                        <select class="dwidth">
+                            <option value="Ptype">Student</option>
+                            <option value="Ptype">Intern</option>
+                            <option value="Ptype">Employee</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="shift">
+                    <form>
+                        <label>Would you recommend GeeksForGeeks to a friend?</label><br>
+                        <input type="radio" value="Yes" name="Rfriend">Yes <br>
+                        <input type="radio" value="No" name="Rfriend">No <br>
+                        <input type="radio" value="Maybe" name="Rfriend">Maybe
+                    </form>
+                </div>
+                <div class="shift">
+                    <form>
+                        <label>Languages and Frameworks known(check all the apply)</label><br>
+                        <input type="checkbox" name="skills">C <br>
+                        <input type="checkbox" name="skills">C++ <br>
+                        <input type="checkbox" name="skills">C# <br>
+                        <input type="checkbox" name="skills">Java <br>
+                        <input type="checkbox" name="skills">Python <br>
+                        <input type="checkbox" name="skills">Javascript <br>
+                        <input type="checkbox" name="skills">React <br>
+                        <input type="checkbox" name="skills">Angular <br>
+                        <input type="checkbox" name="skills">Django <br>
+                        <input type="checkbox" name="skills">Spring <br>
+                    </form>
+                </div>
+                <div class="shift">
+                    <form>
+                        <label>Any comments or suggestions</label>
+                        <textarea rows="2" cols="46"></textarea>
+                    </form>
+                </div>
+                <div id="shift">
+                    <form>
+                        <input id="submits" type="submit">
+                    </form>
+                </div>
+        </div>
+      </div>
+</body>
+</html>
