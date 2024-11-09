@@ -1,3 +1,7 @@
+body{
+    background-image: url('img.jpg');
+    background-size: cover;
+}
 #main{
     border: 1px solid rgb(30, 199, 103);
     width: 400px;
