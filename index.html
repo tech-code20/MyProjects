@@ -1,85 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeeksForGeeks Survey Form</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />       
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body{
+      border: 1px solid gray;
+      margin: 0;
+      background-color: gray;
+    }
+    #div{
+      border: 1px solid black;
+      background-color: black;
+      width: 250px;
+      height: 400px;
+      margin: auto;
+      vertical-align: middle;
+    }
+    #btn-container {
+      /* margin-top: 100px; */
+      /* margin: 50px; */
+      /* background-color: black; */
+      /* width: 250px;
+      height: 400px; */
+      margin-left: 15px;
+      margin-top: 20px;
+      border: 1px solid black;
+    }
+    h1{
+      color: red; 
+      padding-left: 50px;
+    }
+    .btn{
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-weight: 900;
+      font-size: large;
+      margin-right:5px 5px 5px 3px;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+      
+    }
+    #multi{
+      padding-top: 10px;
+      font-size: 25px;
+      margin-top: 5px;
+      background-color: yellow;
+    }
+    #add{
+      font-size: 25px;
+      margin-top: 5px;
+      background-color: yellow;
+    }
+    #division{
+      font-size: 25px;
+      margin-top: 5px;
+      background-color: yellow;
+    }
+    #sub{
+      font-size: 25px;
+      margin-top: 5px;
+      background-color: yellow;
+    }
+    #equal{
+      background-color: green;
+    }
+    #reset{
+      background-color: red;
+    }
+    input{
+      width: 97%;
+      height: 30px;
+      font-size: 30px;
+      /* direction: rtl; */
+    }
+   
+  </style>
 </head>
 <body>
-    <div id="main">
-        <h1>GeeksForGeeks Survey Form</h1>
-        <div id="forms">
-                <div class="shift">
-                    <form>
-                        <label for="names">Name</label><br>
-                        <input class="width" type="text" placeholder="Enter your name" id="names">
-                    </form>
-                </div>
-                <div class="shift">
-                    <form>
-                        <label for="emails">Email</label><br>
-                        <input class="width" type="email" placeholder="Enter your email" id="emails">
-                    </form>
-                </div>
-                <div class="shift">
-                    <form>
-                        <label for="ages">Age</label><br>
-                        <input class="width" type="number" min="21" placeholder="Enter your age" id="ages">
-                    </form>
-                </div>
-                <div class="shift">
-                    <form>
-                        <label>Which option best describes for you?</label><br>
-                        <select class="dwidth">
-                            <option value="Ptype">Student</option>
-                            <option value="Ptype">Intern</option>
-                            <option value="Ptype">Employee</option>
-                        </select>
-                    </form>
-                </div>
-                <div class="shift">
-                    <form>
-                        <label>Would you recommend GeeksForGeeks to a friend?</label><br>
-                        <input type="radio" value="Yes" name="Rfriend">Yes <br>
-                        <input type="radio" value="No" name="Rfriend">No <br>
-                        <input type="radio" value="Maybe" name="Rfriend">Maybe
-                    </form>
-                </div>
-                <div class="shift">
-                    <form>
-                        <label>Languages and Frameworks known(check all the apply)</label><br>
-                        <input type="checkbox" name="skills">C <br>
-                        <input type="checkbox" name="skills">C++ <br>
-                        <input type="checkbox" name="skills">C# <br>
-                        <input type="checkbox" name="skills">Java <br>
-                        <input type="checkbox" name="skills">Python <br>
-                        <input type="checkbox" name="skills">Javascript <br>
-                        <input type="checkbox" name="skills">React <br>
-                        <input type="checkbox" name="skills">Angular <br>
-                        <input type="checkbox" name="skills">Django <br>
-                        <input type="checkbox" name="skills">Spring <br>
-                    </form>
-                </div>
-                <div class="shift">
-                    <form>
-                        <label>Any comments or suggestions</label>
-                        <textarea rows="2" cols="46"></textarea>
-                    </form>
-                </div>
-                <div id="shift">
-                    <form>
-                        <input id="submits" type="submit">
-                    </form>
-                </div>
-        </div>
+  <div id="div">
+    <h1>Calculator</h1>
+    <form action="" >
+      <input type="text" value="0" id="inputs">
+    </form>
+    <div id="btn-container">
+      <button class="btn" id="one" onclick="
+      myFun('1')
+      ">1</button>
+      <button class="btn" id="two" onclick="myFun('2')">2</button>
+      <button class="btn" id="three" onclick="myFun('3')">3</button>
+      <button class="btn" id="add" onclick="adition()">+</button>
+      <br>
+      <button class="btn" id="four" onclick="myFun('4')">4</button>
+      <button class="btn" id="five" onclick="myFun('5')">5</button>
+      <button class="btn" id="six" onclick="myFun('6')">6</button>
+      <button class="btn" id="sub" onclick="sub()">-</button><br>
+      <button class="btn" id="seven" onclick="myFun('7')">7</button>
+      <button class="btn" id="eight" onclick="myFun('8')">8</button>
+      <button class="btn" id="nine" onclick="myFun('9')">9</button>
+      <button class="btn" id="multi" onclick="multi()">*</button>
+      <br>
+      <button class="btn" id="reset" onclick="reset()">AC</button>
+      <button class="btn" id="zero"onclick="myFun('0')">0</button>
+      <button class="btn" id="equal" onclick="equal()">=</button>
+      <button class="btn" id="division" onclick="division()">/</button>
       </div>
+  </div>
+  <script>
+    let result = 0;
+    let calculation = 0;
+    function myFun(val){
+
+      calculation = document.getElementById('inputs');
+      if(calculation.value == '0') {
+        calculation.value = '';
+      }
+      calculation.value += val;
+      result += calculation.value;
+       
+    }
+    function adition() {
+      calculation.value += '+';
+    }
+    function sub() {
+      calculation.value += '-';
+    }
+    function multi() {
+      calculation.value += '*';
+    }
+    function division() {
+      calculation.value += '/';
+    }
+
+    function reset() {
+      calculation.value = '0';
+    }
+    function equal(){
+     calculation.value = Math.round((eval(calculation.value)*100))/100;
+    }
+  </script>
 </body>
 </html>
